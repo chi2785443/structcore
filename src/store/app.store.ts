@@ -7,21 +7,32 @@ interface AppStore {
   toggleTheme: () => void;
 }
 
+function applyClass(isDark: boolean) {
+  document.documentElement.classList.toggle("dark", isDark);
+}
+
 export const useAppStore = create<AppStore>()(
   persist(
-    (set) => ({
-      theme: "light",
+    (set, get) => ({
+      theme: "light",                       // always default to light
+
       setTheme: (t) => {
         set({ theme: t });
-        document.documentElement.classList.toggle("dark", t === "dark");
+        applyClass(t === "dark");
       },
-      toggleTheme: () =>
-        set((s) => {
-          const next = s.theme === "light" ? "dark" : "light";
-          document.documentElement.classList.toggle("dark", next === "dark");
-          return { theme: next };
-        }),
+
+      toggleTheme: () => {
+        const next = get().theme === "light" ? "dark" : "light";
+        set({ theme: next });
+        applyClass(next === "dark");
+      },
     }),
-    { name: "structcore-app" },
+    {
+      name: "structcore-v2",                // new key clears stale "dark" preference
+      onRehydrateStorage: () => (state) => {
+        // Sync the DOM class after Zustand rehydrates from storage
+        if (state) applyClass(state.theme === "dark");
+      },
+    },
   ),
 );
