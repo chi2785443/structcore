@@ -17,7 +17,7 @@ interface SummaryCardProps {
 export function SummaryCard({ title, items, className }: SummaryCardProps) {
   return (
     <div className={cn("rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden", className)}>
-      <div className="px-4 py-2.5 border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50">
+      <div className="px-4 py-2.5 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800/50">
         <h3 className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider">{title}</h3>
       </div>
       <div className="divide-y divide-slate-100 dark:divide-slate-800">

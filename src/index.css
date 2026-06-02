@@ -25,60 +25,63 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  /* Brand */
-  --color-brand-dark: #0D1117;
-  --color-brand-steel: #1E293B;
+  /* Brand tokens */
+  --color-brand-dark:   #0D1117;
+  --color-brand-steel:  #1E293B;
   --color-brand-accent: #F97316;
 
   --font-sans: ui-sans-serif, "Segoe UI", system-ui, sans-serif;
   --font-mono: ui-monospace, Consolas, "Courier New", monospace;
 }
 
+/* ── Light mode ─────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --card: #ffffff;
-  --card-foreground: #0f172a;
-  --popover: #ffffff;
-  --popover-foreground: #0f172a;
-  --primary: #1e293b;
-  --primary-foreground: #f8fafc;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #1e293b;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #f1f5f9;
-  --accent-foreground: #1e293b;
-  --destructive: #ef4444;
-  --destructive-foreground: #f8fafc;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #94a3b8;
-  --radius: 0.5rem;
+  --background:            #ffffff;
+  --foreground:            #0f172a;
+  --card:                  #ffffff;
+  --card-foreground:       #0f172a;
+  --popover:               #ffffff;
+  --popover-foreground:    #0f172a;
+  --primary:               #1e293b;
+  --primary-foreground:    #f8fafc;
+  --secondary:             #f8fafc;
+  --secondary-foreground:  #1e293b;
+  --muted:                 #f8fafc;
+  --muted-foreground:      #64748b;
+  --accent:                #fff7ed;
+  --accent-foreground:     #c2410c;
+  --destructive:           #ef4444;
+  --destructive-foreground:#f8fafc;
+  --border:                #e2e8f0;
+  --input:                 #f1f5f9;
+  --ring:                  #f97316;
+  --radius:                0.5rem;
 }
 
+/* ── Dark mode ──────────────────────────────────────────────── */
 .dark {
-  --background: #0d1117;
-  --foreground: #f1f5f9;
-  --card: #161b22;
-  --card-foreground: #f1f5f9;
-  --popover: #161b22;
-  --popover-foreground: #f1f5f9;
-  --primary: #f8fafc;
-  --primary-foreground: #1e293b;
-  --secondary: #1e293b;
-  --secondary-foreground: #f1f5f9;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #1e293b;
-  --accent-foreground: #f1f5f9;
-  --destructive: #dc2626;
-  --destructive-foreground: #f8fafc;
-  --border: #30363d;
-  --input: #30363d;
-  --ring: #4b5563;
+  --background:            #0d1117;
+  --foreground:            #f1f5f9;
+  --card:                  #161b22;
+  --card-foreground:       #f1f5f9;
+  --popover:               #161b22;
+  --popover-foreground:    #f1f5f9;
+  --primary:               #f8fafc;
+  --primary-foreground:    #1e293b;
+  --secondary:             #1e293b;
+  --secondary-foreground:  #f1f5f9;
+  --muted:                 #1e293b;
+  --muted-foreground:      #94a3b8;
+  --accent:                #431407;
+  --accent-foreground:     #fed7aa;
+  --destructive:           #dc2626;
+  --destructive-foreground:#f8fafc;
+  --border:                #30363d;
+  --input:                 #21262d;
+  --ring:                  #f97316;
 }
 
+/* ── Base reset ─────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   border-color: var(--border);
@@ -92,19 +95,13 @@ html, body, #root {
   font-family: var(--font-sans);
   background-color: var(--background);
   color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
-}
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: #e2e8f0; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+.dark ::-webkit-scrollbar-thumb { background: #30363d; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #3d444d; }
