@@ -13,12 +13,12 @@ A professional reinforced concrete structural design desktop application built t
 
 ### Structural Modules
 
-| Module | Type | Standard |
-|---|---|---|
-| **Beams** | Simply supported & continuous (multi-span) | BS8110 Cl. 3.4, Table 3.5 |
-| **Columns** | Short & slender, braced & unbraced | BS8110 Cl. 3.8 |
-| **Slabs** | One-way, two-way, flat slab | BS8110 Cl. 3.5, 3.7, Table 3.14 |
-| **Foundations** | Pad foundation | BS8110 Cl. 3.11 |
+| Module          | Type                                       | Standard                        |
+| --------------- | ------------------------------------------ | ------------------------------- |
+| **Beams**       | Simply supported & continuous (multi-span) | BS8110 Cl. 3.4, Table 3.5       |
+| **Columns**     | Short & slender, braced & unbraced         | BS8110 Cl. 3.8                  |
+| **Slabs**       | One-way, two-way, flat slab                | BS8110 Cl. 3.5, 3.7, Table 3.14 |
+| **Foundations** | Pad foundation                             | BS8110 Cl. 3.11                 |
 
 ### Design Checks Performed
 
@@ -44,15 +44,15 @@ A professional reinforced concrete structural design desktop application built t
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Desktop | **Tauri 2** — native Windows `.msi` / `.exe` installer |
-| Frontend | **React 19** + **Vite 8** + **TypeScript 6** |
-| Styling | **Tailwind CSS v4** + **shadcn/ui** |
-| State | **Zustand 5** |
-| Charts | **D3.js 7** |
-| Routing | **react-router-dom v7** |
-| Package manager | **pnpm** |
+| Layer           | Technology                                             |
+| --------------- | ------------------------------------------------------ |
+| Desktop         | **Tauri 2** — native Windows `.msi` / `.exe` installer |
+| Frontend        | **React 19** + **Vite 8** + **TypeScript 6**           |
+| Styling         | **Tailwind CSS v4** + **shadcn/ui**                    |
+| State           | **Zustand 5**                                          |
+| Charts          | **D3.js 7**                                            |
+| Routing         | **react-router-dom v7**                                |
+| Package manager | **pnpm**                                               |
 
 ---
 
@@ -170,3 +170,5 @@ Results produced by StructCore must be verified by a qualified structural engine
 ## License
 
 MIT © 2025 StructCore
+
+USE DESIGN LOAD OR MOMENT OF IT
